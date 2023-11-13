@@ -1,4 +1,6 @@
 # .gitignore
 
 .vscode
-.env
+hw7/.env
+venv/
+hw7/hw7-ddl copy.sql
