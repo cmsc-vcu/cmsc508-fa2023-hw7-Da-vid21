@@ -1,4 +1,7 @@
--- Section 1: Drops all tables
+# hw7-ddl.sql
+
+# Section 1
+# Drops all tables.  This section should be amended as new tables are added.
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS peopleskills;
 DROP TABLE IF EXISTS peopleroles;
@@ -7,7 +10,7 @@ DROP TABLE IF EXISTS roles;
 DROP TABLE IF EXISTS skills;
 SET FOREIGN_KEY_CHECKS = 1;
 
--- Section 2: Create skills table
+# Section 2
 CREATE TABLE skills (
     id INT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -17,7 +20,7 @@ CREATE TABLE skills (
     time_commitment VARCHAR(255) DEFAULT NULL
 );
 
--- Section 3: Populate skills
+# Section 3
 INSERT INTO skills (id, name, description, tag) VALUES
 (1, 'Programming', 'Understanding and writing computer programs', 'Skill 1'),
 (2, 'Data Analysis', 'Analyzing and interpreting complex datasets', 'Skill 2'),
@@ -28,7 +31,7 @@ INSERT INTO skills (id, name, description, tag) VALUES
 (7, 'Public Speaking', 'Effectively delivering speeches to audiences', 'Skill 7'),
 (8, 'Writing', 'Composing text for various purposes', 'Skill 8');
 
--- Section 4: Create people table
+# Section 4
 CREATE TABLE people (
     id INT PRIMARY KEY,
     first_name VARCHAR(255),
@@ -41,20 +44,16 @@ CREATE TABLE people (
     date_joined DATE NOT NULL
 );
 
--- Section 5: Populate people
+# Section 5
 INSERT INTO people (id, first_name, last_name, date_joined) VALUES
 (1, 'John', 'Person 1', '2023-01-01'),
 (2, 'Jane', 'Person 2', '2023-01-02'),
 (3, 'Mike', 'Person 3', '2023-01-03'),
 (4, 'Sara', 'Person 4', '2023-01-04'),
 (5, 'Leo', 'Person 5', '2023-01-05'),
-(6, 'Emily', 'Person 6', '2023-01-06'),
-(7, 'Chris', 'Person 7', '2023-01-07'),
-(8, 'Olivia', 'Person 8', '2023-01-08'),
-(9, 'Ethan', 'Person 9', '2023-01-09'),
-(10, 'Mia', 'Person 10', '2023-01-10');
+(6, 'Emily', 'Person 6', '2023-01-06');
 
--- Section 6: Create peopleskills table
+# Section 6
 CREATE TABLE peopleskills (
     id INT AUTO_INCREMENT PRIMARY KEY,
     skills_id INT,
@@ -64,7 +63,7 @@ CREATE TABLE peopleskills (
     FOREIGN KEY (people_id) REFERENCES people(id)
 );
 
--- Section 7: Populate peopleskills
+# Section 7
 INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
 (1, 1, '2023-01-01'),
 (3, 1, '2023-01-01'),
@@ -80,14 +79,14 @@ INSERT INTO peopleskills (skills_id, people_id, date_acquired) VALUES
 (3, 6, '2023-01-06'),
 (4, 6, '2023-01-06');
 
--- Section 8: Create roles table
+# Section 8
 CREATE TABLE roles (
     id INT PRIMARY KEY,
     name VARCHAR(255),
     sort_priority INT
 );
 
--- Section 9: Populate roles
+# Section 9
 INSERT INTO roles (id, name, sort_priority) VALUES
 (1, 'Designer', 10),
 (2, 'Developer', 20),
@@ -96,7 +95,7 @@ INSERT INTO roles (id, name, sort_priority) VALUES
 (5, 'Boss', 50),
 (6, 'Mentor', 60);
 
--- Section 10: Create peopleroles table
+# Section 10
 CREATE TABLE peopleroles (
     id INT AUTO_INCREMENT PRIMARY KEY,
     people_id INT,
@@ -106,7 +105,7 @@ CREATE TABLE peopleroles (
     FOREIGN KEY (role_id) REFERENCES roles(id)
 );
 
--- Section 11: Populate peopleroles
+# Section 11
 INSERT INTO peopleroles (people_id, role_id, date_assigned) VALUES
 (1, 2, '2023-01-01'), -- Person 1 is Developer
 (2, 5, '2023-01-02'), -- Person 2 is Boss
