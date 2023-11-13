@@ -3284,7 +3284,10 @@ z-index: 1000;
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#overview-and-description" id="toc-overview-and-description" class="nav-link active" data-scroll-target="#overview-and-description">Overview and description</a></li>
+  <li><a href="#overview-and-description" id="toc-overview-and-description" class="nav-link active" data-scroll-target="#overview-and-description">Overview and description</a>
+  <ul class="collapse">
+  <li><a href="#problem-definition-and-scope" id="toc-problem-definition-and-scope" class="nav-link" data-scroll-target="#problem-definition-and-scope">Problem Definition and Scope</a></li>
+  </ul></li>
   <li><a href="#crows-foot-diagram" id="toc-crows-foot-diagram" class="nav-link" data-scroll-target="#crows-foot-diagram">Crows-foot diagram</a></li>
   <li><a href="#examples-of-data-in-the-database" id="toc-examples-of-data-in-the-database" class="nav-link" data-scroll-target="#examples-of-data-in-the-database">Examples of data in the database</a>
   <ul class="collapse">
@@ -3303,6 +3306,7 @@ z-index: 1000;
   <li><a href="#list-names-and-tags-of-unused-skills" id="toc-list-names-and-tags-of-unused-skills" class="nav-link" data-scroll-target="#list-names-and-tags-of-unused-skills">List names and tags of unused skills</a></li>
   <li><a href="#list-people-names-and-skill-names-with-the-boss-role" id="toc-list-people-names-and-skill-names-with-the-boss-role" class="nav-link" data-scroll-target="#list-people-names-and-skill-names-with-the-boss-role">List people names and skill names with the BOSS role</a></li>
   <li><a href="#list-ids-and-names-of-unused-roles" id="toc-list-ids-and-names-of-unused-roles" class="nav-link" data-scroll-target="#list-ids-and-names-of-unused-roles">List ids and names of unused roles</a></li>
+  <li><a href="#example-use-cases" id="toc-example-use-cases" class="nav-link" data-scroll-target="#example-use-cases">Example use cases</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
   </ul></li>
   </ul>
@@ -3339,11 +3343,16 @@ z-index: 1000;
 
 </header>
 
-<p>GITHUB URL: &lt;your URL goes here!&gt;</p>
+<p>GITHUB URL: https://github.com/cmsc-vcu/cmsc508-fa2023-hw7-Da-vid21</p>
 <p>This document gets some of the data from a resume database and also has a crows foot diagram of the database. It also explains some of the data/code structure in the database</p>
 <section id="overview-and-description" class="level2">
 <h2 class="anchored" data-anchor-id="overview-and-description">Overview and description</h2>
 <p>This project is about building a resume database to hold each person/applicant’s personal information, skills, roles, and specialization. Using a sql file to create the tables with it’s attributes and add a few demo data into the table</p>
+<p>The database is designed to be flexible and scalable, capable of accommodating a wide range of skills and roles, and suitable for various organizational sizes and types. It can be utilized to analyze skill distributions, identify training needs, manage role assignments, and support career development pathways within an organization.</p>
+<section id="problem-definition-and-scope" class="level3">
+<h3 class="anchored" data-anchor-id="problem-definition-and-scope">Problem Definition and Scope</h3>
+<p>This database project is designed to address the challenge of efficiently managing and tracking the skills, roles, and professional profiles of individuals within a dynamic organizational environment. The primary focus is on creating a structured and scalable database system that facilitates the cataloging of a diverse set of skills, the assignment of various roles, and the maintenance of detailed personal profiles. The intended use groups for this project encompass HR departments, team leaders, and project managers in corporate, academic, or volunteer settings. These users can leverage the database to analyze skill distributions, oversee role assignments, and support career progression within their respective organizations, thus enabling a more informed and effective management of human resources. The scope of the project, therefore, encompasses both the data structure design and the development of user-friendly interfaces for data interaction and reporting.</p>
+</section>
 </section>
 <section id="crows-foot-diagram" class="level2">
 <h2 class="anchored" data-anchor-id="crows-foot-diagram">Crows-foot diagram</h2>
@@ -3412,7 +3421,7 @@ z-index: 1000;
 <p>The <strong>people</strong> table contains elements that describe individuals associated with various skills and roles. It includes personal details such as names, contact information, and biographical data. This table is essential for storing and managing information about each person, including their professional and contact details.</p>
 <p>Below is a list of data in the <em>people</em> table.</p>
 <div class="cell" data-execution_count="5">
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="69">
 <div>
 
 
@@ -3564,7 +3573,7 @@ z-index: 1000;
 <p>The <em>skills</em> table contains elements that describe various skills that can be acquired or possessed by individuals. This includes detailed descriptions, categorizations, and potentially additional information like related URLs or time commitments for skill development. This table is key for tracking the range of skills available and associating them with the respective individuals in the people table.</p>
 <p>Below is a list of data in the <em>skills</em> table.</p>
 <div class="cell" data-execution_count="6">
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="70">
 <div>
 
 
@@ -3665,7 +3674,7 @@ z-index: 1000;
 <p>The <em>roles</em> table contains elements that describe various roles or positions that individuals can hold. This includes information such as the role name and its sort priority, which could be used for organizational purposes. The roles table plays a crucial role in defining and categorizing the different types of responsibilities or positions that individuals can occupy within an organization or a project.</p>
 <p>Below is a list of data in the <em>roles</em> table.</p>
 <div class="cell" data-execution_count="7">
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="71">
 <div>
 
 
@@ -3730,7 +3739,7 @@ z-index: 1000;
 <section id="list-skill-names-tags-and-descriptions-ordered-by-name" class="level1">
 <h1>List skill names, tags, and descriptions ordered by name</h1>
 <div class="cell" data-execution_count="8">
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="72">
 <div>
 
 
@@ -3801,7 +3810,7 @@ z-index: 1000;
 <section id="list-people-names-and-email-addresses-ordered-by-last_name" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-names-and-email-addresses-ordered-by-last_name">List people names and email addresses ordered by last_name</h3>
 <div class="cell" data-execution_count="9">
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="73">
 <div>
 
 
@@ -3885,7 +3894,7 @@ z-index: 1000;
 <section id="list-skill-names-of-person-1" class="level3">
 <h3 class="anchored" data-anchor-id="list-skill-names-of-person-1">List skill names of Person 1</h3>
 <div class="cell" data-execution_count="10">
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="74">
 <div>
 
 
@@ -3919,7 +3928,7 @@ z-index: 1000;
 <section id="list-people-names-with-skill-6" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-names-with-skill-6">List people names with Skill 6</h3>
 <div class="cell" data-execution_count="11">
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="75">
 <div>
 
 
@@ -3952,7 +3961,7 @@ z-index: 1000;
 <section id="list-people-with-a-developer-role" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-with-a-developer-role">List people with a DEVELOPER role</h3>
 <div class="cell" data-execution_count="12">
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="76">
 <div>
 
 
@@ -4000,7 +4009,7 @@ z-index: 1000;
 <section id="list-names-and-email-addresses-of-people-without-skills" class="level3">
 <h3 class="anchored" data-anchor-id="list-names-and-email-addresses-of-people-without-skills">List names and email addresses of people without skills</h3>
 <div class="cell" data-execution_count="13">
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="77">
 <div>
 
 
@@ -4054,7 +4063,7 @@ z-index: 1000;
 <section id="list-names-and-tags-of-unused-skills" class="level3">
 <h3 class="anchored" data-anchor-id="list-names-and-tags-of-unused-skills">List names and tags of unused skills</h3>
 <div class="cell" data-execution_count="14">
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="78">
 <div>
 
 
@@ -4087,7 +4096,7 @@ z-index: 1000;
 <section id="list-people-names-and-skill-names-with-the-boss-role" class="level3">
 <h3 class="anchored" data-anchor-id="list-people-names-and-skill-names-with-the-boss-role">List people names and skill names with the BOSS role</h3>
 <div class="cell" data-execution_count="15">
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="79">
 <div>
 
 
@@ -4129,7 +4138,7 @@ z-index: 1000;
 <section id="list-ids-and-names-of-unused-roles" class="level3">
 <h3 class="anchored" data-anchor-id="list-ids-and-names-of-unused-roles">List ids and names of unused roles</h3>
 <div class="cell" data-execution_count="16">
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="80">
 <div>
 
 
@@ -4149,9 +4158,24 @@ z-index: 1000;
 </div>
 </div>
 </section>
+<section id="example-use-cases" class="level2">
+<h2 class="anchored" data-anchor-id="example-use-cases">Example use cases</h2>
+<p>The database can be leveraged in various ways to extract valuable information. Here are some examples</p>
+<ol type="1">
+<li><p>Identifying Skill Gaps:</p>
+<pre><code> Query: List all skills not possessed by any team member in a specific department.
+ Use: Helps in identifying training needs and skill gaps within a team or department.</code></pre></li>
+<li><p>Role Assignment Analysis:</p>
+<pre><code> Query: Find all individuals without an assigned role.
+ Use: Assists in ensuring all team members have designated roles, optimizing team organization.</code></pre></li>
+<li><p>Skill Profiling for Project Allocation:</p>
+<pre><code> Query: Select individuals with a specific skill set required for a new project.
+ Use: Facilitates the selection of appropriately skilled individuals for project assignments.</code></pre></li>
+</ol>
+</section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>(Write a paragraph expressing your thoughts, feelings, and insights about your experience with this assignment. Pause and breath before writing - I’m trying to encourage critical thinking and self-awareness while allowing you to explore the connections between theory and practice. And yes, delete this paragraph.)</p>
+<p>I think this was a good project it was a little frustrating using the ddl stuff as I have never done that and the errors sometimes were unclear when all I had to do was remove an extra comma. Learned a lot of stuff along the way. I had some extra time to play around with pandas to see how I can leverage sql commands and panadas for a personal project overall it was a better project than the last ome</p>
 </section>
 </section>
 

@@ -93,6 +93,12 @@ except Exception as e:
 
 This project is about building a resume database to hold each person/applicant's personal information, skills, roles, and specialization. Using a sql file to create the tables with it's attributes and add a few demo data into the table
 
+The database is designed to be flexible and scalable, capable of accommodating a wide range of skills and roles, and suitable for various organizational sizes and types. It can be utilized to analyze skill distributions, identify training needs, manage role assignments, and support career development pathways within an organization.
+
+### Problem Definition and Scope
+
+This database project is designed to address the challenge of efficiently managing and tracking the skills, roles, and professional profiles of individuals within a dynamic organizational environment. The primary focus is on creating a structured and scalable database system that facilitates the cataloging of a diverse set of skills, the assignment of various roles, and the maintenance of detailed personal profiles. The intended use groups for this project encompass HR departments, team leaders, and project managers in corporate, academic, or volunteer settings. These users can leverage the database to analyze skill distributions, oversee role assignments, and support career progression within their respective organizations, thus enabling a more informed and effective management of human resources. The scope of the project, therefore, encompasses both the data structure design and the development of user-friendly interfaces for data interaction and reporting.
+
 ## Crows-foot diagram
 
 The crow foot shows the what the database looks like with each of the distinct tables with it's attributes, unique/primary key(s) and relationships
@@ -410,6 +416,25 @@ except Exception as e:
 df
 
 ```
+
+## Example use cases
+
+The database can be leveraged in various ways to extract valuable information. Here are some examples
+
+1. Identifying Skill Gaps:
+
+        Query: List all skills not possessed by any team member in a specific department.
+        Use: Helps in identifying training needs and skill gaps within a team or department.
+
+2. Role Assignment Analysis:
+
+        Query: Find all individuals without an assigned role.
+        Use: Assists in ensuring all team members have designated roles, optimizing team organization.
+
+3. Skill Profiling for Project Allocation:
+
+        Query: Select individuals with a specific skill set required for a new project.
+        Use: Facilitates the selection of appropriately skilled individuals for project assignments.
 
 ## Reflection
 
